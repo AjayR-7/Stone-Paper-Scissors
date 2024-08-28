@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Paper Scissors Game</title>
+    <link rel="stylesheet" href="sps.css">
+</head>
+<body>
+    <div class="theme-selector">
+        <label for="theme">Theme:</label>
+        <select id="theme" onchange="changeTheme(this.value)">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="blue">Blue</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <h1>Stone Paper Scissors</h1>
+
+        <div class="choices">
+            <button onclick="playGame('stone')"><i class="fas fa-hand-rock"></i> Stone</button>
+            <button onclick="playGame('paper')"><i class="fas fa-hand-paper"></i> Paper</button>
+            <button onclick="playGame('scissors')"><i class="fas fa-hand-scissors"></i> Scissors</button>
+        </div>
+        <div class="result">
+            <p id="resultText"></p>
+        </div>
+        <div class="score">
+            <p id="scoreText">Your Score: 0 | Our Score: 0</p>
+        </div>
+        <button class="refresh-btn" onclick="refreshGame()">Refresh Game</button>
+    </div>
+
+    <script src="sps.js"></script>
+</body>
+</html>
